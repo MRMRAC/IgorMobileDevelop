@@ -1,0 +1,66 @@
+// 1. validateUsername
+function validateUsername(username) {
+  if (typeof username !== 'string') {
+    return 'Username must be a string';
+  }
+  if (username.length < 5 || username.length > 15) {
+    return 'Username length must be between 5 and 15 characters';
+  }
+  return null;
+}
+
+// 2. validateEmail
+function validateEmail(email) {
+  if (typeof email !== 'string') {
+    return 'Email must be a string';
+  }
+  const atIndex = email.indexOf('@');
+  if (atIndex === -1) {
+    return 'Email must contain "@"';
+  }
+  // Проверяем, что после @ есть точка
+  const dotIndex = email.indexOf('.', atIndex);
+  if (dotIndex === -1) {
+    return 'Email must contain a dot (".") after "@"';
+  }
+  return null;
+}
+
+// 3. validateAge
+function validateAge(age) {
+  if (typeof age !== 'number' || !Number.isInteger(age)) {
+    return 'Age must be an integer number';
+  }
+  if (age < 18 || age > 120) {
+    return 'Age must be between 18 and 120';
+  }
+  return null;
+}
+
+// 4. validateAgreement
+function validateAgreement(isAgreed) {
+  if (typeof isAgreed !== 'boolean') {
+    return 'Agreement must be a boolean';
+  }
+  if (isAgreed !== true) {
+    return 'Agreement must be accepted';
+  }
+  return null;
+}
+
+// 5. validatePhone
+function validatePhone(phone) {
+  if (phone === undefined) {
+    return null; // поле не заполнено — ошибки нет
+  }
+  if (typeof phone !== 'string') {
+    return 'Phone must be a string or undefined';
+  }
+  if (!phone.startsWith('+7')) {
+    return 'Phone must start with "+7"';
+  }
+  if (phone.length !== 12) {
+    return 'Phone length must be exactly 12 characters';
+  }
+  return null;
+}
