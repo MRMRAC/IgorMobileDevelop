@@ -6,7 +6,7 @@ function validateUsername(username) {
   if (username.length < 5 || username.length > 15) {
     return 'длина username от 5 до 15 символов';
   }
-  return null; // ошибок нет
+  return null; 
 }
 
 // 2. Проверка email
@@ -28,7 +28,7 @@ function validateEmail(email) {
 // 3. Проверка возраста
 function validateAge(age) {
   if (typeof age !== 'number' || !Number.isInteger(age)) {
-    return 'Ошибка: возраст должен быть целым числом';
+    return 'возраст должен быть целым числом';
   }
   if (age < 18 || age > 120) {
     return 'возраст должен быть от 18 до 120';
@@ -50,7 +50,7 @@ function validateAgreement(isAgreed) {
 // 5. Проверка телефона
 function validatePhone(phone) {
   if (phone === undefined) {
-    return null; // если не заполнено, ошибок нет
+    return null; 
   }
   if (typeof phone !== 'string') {
     return 'телефон должен быть строкой или undefined';
