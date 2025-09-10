@@ -39,7 +39,7 @@ function validateAge(age) {
 // 4. Проверка согласия
 function validateAgreement(isAgreed) {
   if (typeof isAgreed !== 'boolean') {
-    return 'Ошибка: согласие должно быть булевым значением';
+    return 'согласие должно быть булевым значением';
   }
   if (isAgreed !== true) {
     return 'нужно принять соглашение';
