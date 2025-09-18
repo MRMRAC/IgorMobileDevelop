@@ -16,7 +16,7 @@ console.log("Поиск пользователя id=99:", findUserById(99));
 console.log("Обновление пользователя id=1:", updateUser(1, { email: "alice_new@yandex.ru" }));
 
 // --- Работа с заказами ---
-console.log("\n=== Заказы ===");
+console.log("\n**********************Заказы*****************************");
 console.log("Все заказы:", orders);
 
 console.log("Заказы пользователя id=1:", getUserOrders(1));
