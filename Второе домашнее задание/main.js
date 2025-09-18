@@ -3,7 +3,7 @@ import { createUser, findUserById, updateUser } from "./userFunctions.js";
 import { getUserOrders, addProductToOrder, getOrderSummary } from "./orderFunctions.js";
 import { calculateTotal, formatUserInfo } from "./utils.js";
 
-// --- Работа с пользователями ---
+//пользователи
 console.log("=== Пользователи ===");
 console.log("Все пользователи:", users);
 
@@ -15,7 +15,7 @@ console.log("Поиск пользователя id=99:", findUserById(99));
 
 console.log("Обновление пользователя id=1:", updateUser(1, { email: "alice_new@yandex.ru" }));
 
-// --- Работа с заказами ---
+//заказы
 console.log("\n**********************Заказы*****************************");
 console.log("Все заказы:", orders);
 
@@ -25,8 +25,7 @@ console.log("Добавляем продукт в заказ 101:", addProductTo
 
 console.log("Сводка по заказу 103:", getOrderSummary(103));
 
-// --- Вспомогательные функции ---
 console.log("\n=== Вспомогательные функции ===");
 console.log("Общая сумма:", calculateTotal(10, 20.5, 5));
 
-console.log("Форматированная инфо о пользователе:", formatUserInfo(users[0]));
+console.log("Форматированная информация о пользователе:", formatUserInfo(users[0]));
