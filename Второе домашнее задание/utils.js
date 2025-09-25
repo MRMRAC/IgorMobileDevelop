@@ -8,7 +8,7 @@ export function calculateTotal(...prices) {
 }
 
 // Функция для форматирования информации о пользователе
-export function formatUser Info(user) {
+export function formatUserInfo(user) {
   const name = user.name;
   const email = user.email;
   const isActive = user.isActive;
